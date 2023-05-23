@@ -1,0 +1,20 @@
+.header{
+    
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: antiquewhite;
+}
+#blank{
+    background-color: aqua;
+    height: max-content;
+    width: 100%;
+}
+.card{
+    margin-bottom: 20px;
+    margin-left: 60px;
+    border-radius: 10px ;
+    border: 5px solid black;
+    
+}

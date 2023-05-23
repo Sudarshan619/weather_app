@@ -1,0 +1,60 @@
+<h1 class="header" style="text-align: center; margin: auto;">
+    Weather condition in {{result.name}}
+</h1>
+
+<div  *ngIf="value else blank" class="container text-center">
+    <div class="row justify-content-sm-center ">
+        <div class="col col-lg-4 col-sm-12 col-md-6">
+            <div class="card" style="width: 18rem;">
+                <img src="https://openweathermap.org/img/wn/{{result.weather[0].icon}}@2x.png" class="card-img-top"
+                    alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Weather</h5>
+                    <p class="card-text"> Condition:{{result.weather[0].main}}</p>
+
+                    <p class="card-text"> Description:{{result.weather[0].description}}</p>
+                    <p class="card-text"> Speed:{{result.wind.speed}}</p>
+                    <p class="card-text"> Deg:{{result.wind.deg}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-4 col-md-6 col-sm-12">
+            <div class="card" style="width: 18rem;">
+                <img style="height: 200px;"
+                    src="https://cdn.icon-icons.com/icons2/788/PNG/512/thermometer_icon-icons.com_65086.png"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Temperature</h5>
+                    <p class="card-text">Temperature:{{result.main.temp}} C</p>
+                    <p class="card-text">Feels_like:{{result.main.feels_like}} C</p>
+                    <p style="color: green;" class="card-text">Temp_min: {{result.main.temp_min}} C</p>
+                    <p style="color: red;" class="card-text">Temp_max:{{result.main.temp_max}} C</p>
+                    <p style="color: lightblue;" class="card-text">Pressure:{{result.main.pressure}} Pa</p>
+                    <p class="card-text">Humidity":{{result.main.humidity}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-4 col-sm-12 col-md-6">
+            <div class="card" style="width: 18rem;">
+                <img style="height: 200px;"
+                    src="https://1.bp.blogspot.com/-nO3qPOtQJ-A/Xwo_LZEYCBI/AAAAAAAABAU/KDoOKCEW7UYWLsdqqKYwk6D8of93VapgACLcBGAsYHQ/s2048/location%2Bicon.png"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Country</h5>
+                    <p class="card-text">Country:{{result.sys.country}}</p>
+                    <p class="card-text">Sunrise:{{result.sys.sunrise}}</p>
+                    <p class="card-text">Sunset:{{result.sys.sunset}}</p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<ng-template #blank >
+    <div id="blank">
+        <h1>hello world</h1>
+        
+    </div>
+</ng-template>
