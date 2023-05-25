@@ -17,8 +17,8 @@ export class UserDataService {
   datareceived:EventEmitter<any>=new EventEmitter<any>();
  ans:any;
 
-  getformdata1(location=this.user.location){
-   return this.http.get(this.API+'q='+location+'&units=metric' +this.apikey ); 
+  getformdata1(location=this.user.location,metric=this.user.metric,lang=this.user.lang){
+   return this.http.get(this.API+'q='+location+'&units='+ metric +"&lang="+lang+ this.apikey ); 
   }
   setresult(data:any){
    this.datareceived.emit(data);

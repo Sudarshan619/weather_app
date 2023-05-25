@@ -22,7 +22,7 @@ ngOnInit(){
 
 search(){
   
-  this.user1.getformdata1(this.user.location).subscribe(res=> {
+  this.user1.getformdata1(this.user.location,this.user.metric,this.user.lang).subscribe(res=> {
     console.log(res);
     this.user1.setresult(res);
    

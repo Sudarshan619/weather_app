@@ -1,8 +1,7 @@
-<h1 class="header" style="text-align: center; margin: auto;">
-    Weather condition in {{result.name}}
-</h1>
-
-<div  *ngIf="value else blank" class="container text-center">
+<div *ngIf="value; else blank" class="container text-center">
+    <h1 class="header" style="text-align: center; margin: auto;">
+        Weather condition in {{result.name}}
+    </h1>
     <div class="row justify-content-sm-center ">
         <div class="col col-lg-4 col-sm-12 col-md-6">
             <div class="card" style="width: 18rem;">
@@ -25,12 +24,12 @@
                     class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Temperature</h5>
-                    <p class="card-text">Temperature:{{result.main.temp}} C</p>
-                    <p class="card-text">Feels_like:{{result.main.feels_like}} C</p>
-                    <p style="color: green;" class="card-text">Temp_min: {{result.main.temp_min}} C</p>
-                    <p style="color: red;" class="card-text">Temp_max:{{result.main.temp_max}} C</p>
+                    <p class="card-text">Temperature:{{result.main.temp}} </p>
+                    <p class="card-text">Feels_like:{{result.main.feels_like}} </p>
+                    <p style="color: green;" class="card-text">Temp_min: {{result.main.temp_min}} </p>
+                    <p style="color: red;" class="card-text">Temp_max:{{result.main.temp_max}}</p>
                     <p style="color: lightblue;" class="card-text">Pressure:{{result.main.pressure}} Pa</p>
-                    <p class="card-text">Humidity":{{result.main.humidity}}</p>
+                    <p class="card-text">Humidity:{{result.main.humidity}}</p>
                 </div>
             </div>
         </div>
@@ -44,6 +43,8 @@
                     <p class="card-text">Country:{{result.sys.country}}</p>
                     <p class="card-text">Sunrise:{{result.sys.sunrise}}</p>
                     <p class="card-text">Sunset:{{result.sys.sunset}}</p>
+                    <p class="card-text">Timezone;:{{result.timezone}}</p>
+                    <p class="card-text">Visibility:{{result.visibility}}</p>
 
                 </div>
             </div>
@@ -52,9 +53,88 @@
     </div>
 </div>
 
-<ng-template #blank >
-    <div id="blank">
-        <h1>hello world</h1>
+<ng-template #blank>
+    <div class="container">
+        <h1 class="header2">Welcome to WeatherApp</h1>
+        <p>Your ultimate destination for accurate and up-to-date weather information. Whether you're planning a trip,
+            preparing for the day ahead, or simply curious about the forecast, WeatherCast has got you covered. Our
+            powerful weather application combines cutting-edge technology with a user-friendly interface to provide you
+            with comprehensive weather data tailored to your location.</p>
+
+        <p>Stay ahead of the weather with real-time updates, hourly forecasts, and long-term outlooks for any city or
+            region. From temperature and humidity to wind speed and precipitation, WeatherCast delivers precise details
+            to help you make informed decisions. Whether you're a weather enthusiast, an outdoor adventurer, or a busy
+            professional, our app offers the perfect blend of convenience and reliability.</p>
+
+    </div>
+    <!--
+Credit to https://dribbble.com/shots/2350761-Weather-app-illustration for the design
+-->
+
+
+    <header>
+        <h1>weather cards</h1>
+    </header>
+    
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <li class="grid-item">
+                    <div class="card1 card-sunny">
+                        <div class="sunny"></div>
+                    </div>
+                    <div class="status">
+                        <p>27 &#8451;</p>
+                        <p>Mostly sunny</p>
+                    </div>
+                </li>
+            </div>
+            <div class="col">
+                <li class="grid-item">
+                    <div class="card1 card-storm">
+                        <div class="storm"></div>
+                    </div>
+                    <div class="status">
+                        <p>9 &#8451;</p>
+                        <p>Thunderstorms</p>
+                    </div>
+                </li>
+            </div>
+            <div class="col">
+                <li class="grid-item">
+                    <div class="card1 card-snow">
+                        <div class="snow"></div>
+                    </div>
+                    <div class="status">
+                        <p>12 &#8451;</p>
+                        <p>Light flurry</p>
+                    </div>
+                </li>
         
+            </div>
+            <div class="col">
+                <li class="grid-item">
+                    <div class="card1 card-rain">
+                        <div class="rain"></div>
+                    </div>
+                    <div class="status">
+                        <p>17 &#8451;</p>
+                        <p>Showers</p>
+                    </div>
+                </li>
+               
+            </div>
+            <div class="col">
+                <li class="grid-item">
+                    <div class="card1 card-night">
+                        <div class="night"></div>
+                    </div>
+                    <div class="status">
+                        <p>22 &#8451;</p>
+                        <p>Clear skies</p>
+                    </div>
+                </li>
+            </div>
+        </div>
     </div>
 </ng-template>

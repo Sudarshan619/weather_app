@@ -1,4 +1,11 @@
 .navbar{
-    height: 80px;
+    height:110px;
     color: aqua;
+    padding-bottom: 10px;
+}
+#search{
+    width:20%;
+}
+.d-flex{text-align: end;
+  width: fit-content;
 }

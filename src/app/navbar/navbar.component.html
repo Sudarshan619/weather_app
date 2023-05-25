@@ -1,12 +1,18 @@
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 <nav class="navbar navbar-bg-primary navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><i class="fa-solid fa-sun-cloud"></i>Wether app</a>
+      <a style="font-family:serif; font-size: 30px;"class="navbar-brand" href="#"><i class="fa-solid fa-clouds"></i>Weather app</a>
      
         <form class="d-flex" role="search" (ngSubmit)="search()" >
             <!-- <label for="search">Search for the place</label> -->
-          <input class="form-control me-2" type="search" placeholder="Enter the city" id="search"name="location" aria-label="Search"[(ngModel)]="user.location" >
+            <input class="form-control me-2" type="search" placeholder="lang" id="search"name="lang" aria-label="Search"[(ngModel)]="user.lang" >
+            <input class="form-control me-2" type="search" placeholder="metric" id="search"name="metric" aria-label="Search"[(ngModel)]="user.metric" >
+          <input class="form-control me-2" type="search" placeholder="location" id="search"name="location" aria-label="Search"[(ngModel)]="user.location" >
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
-      <p>{{result}}</p>
+    <p></p>
     </div>
   </nav>
