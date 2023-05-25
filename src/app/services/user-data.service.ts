@@ -8,7 +8,7 @@ export class UserDataService {
  private API="https://api.openweathermap.org/data/2.5/weather?";
  user=new Navbar();
  
- apikey:any="&appid=23a76d6fb79b378593983b036ffdd452";
+ apikey:any="&appid=add your own api key";
   static getformdata1:any;
   
 
